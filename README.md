@@ -14,4 +14,3 @@ The primary goal of this project is to demonstrate the skills and knowledge acqu
 
 - HTML5
 - CSS3
-- JavaScript

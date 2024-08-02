@@ -1,0 +1,297 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 06-jun-2017, 0:33:15
+    Author     : Juan
+*/
+@import url('https://fonts.googleapis.com/css?family=Barrio');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+a{outline:none; text-decoration:none;}
+
+
+
+a:link {color: dodgerblue}
+a:visited {
+    color: plum;
+}
+
+
+html{
+    font-size: 16px;
+    background-image: url("imagenes/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+body > * {
+    box-shadow: 3rem 1rem 8px rgba(0,0,0,.2);
+  border-radius: 1rem;
+    padding: 2rem;
+    font-family: serif;
+  
+    color:black;
+}
+p{
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:white;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+header{
+    grid-area: header;
+   background: rgba(172, 167, 195, 0.5);
+    height: 6rem;
+
+
+}
+h1{
+    font-family: 'Barrio', cursive;
+    text-align: center;
+    color: black;
+    background-color: rgba(88, 142, 172, 0.6);
+    transform:scale(1.1,1.1);
+
+
+}
+footer{
+    background: rgba(172, 167, 195, 0.4);
+    grid-area: footer;
+    height: 2rem;
+    text-align: right;
+    color:white;
+
+}
+aside{
+    background-color: rgba(88, 142, 172, 0.6);
+    grid-area: aside;
+
+}
+main{
+    grid-area: main;
+    background-color: rgba(139, 193, 187, 0.5);
+}
+body {
+    padding-left: 10rem;
+    width :60rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 1rem;
+    grid-template-areas: "header"
+        "main"
+        "aside"
+        "footer";
+    grid-template-rows: minmax(auto, max-content);
+    min-height: 100vh;
+}
+
+
+ul {
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:transparent;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+.active {
+    background: rgba(229, 234, 129, 0.4);
+}
+img,video{
+    max-width: 100%;
+    display: inline-block;
+    height: auto;
+    border-radius: 1rem;
+    /*  margin-left: 0.1rem;
+        margin-top: 0.1rem;*/
+    margin: auto;
+    transition: 1.5s
+}
+img:hover{
+    transform : scale(2);
+
+}
+video:hover{
+    transform : scale(1.5);
+}
+.polarid{
+    border-radius: 1rem;
+    height: 10rem;
+    border: 1px black;
+    background-color: white;
+    width:10rem;
+    padding: 1rem;
+    box-shadow: 1rem 8px 8px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    float: left;
+
+
+}
+
+.polarid:hover{
+    transform: rotate(-10deg);
+}
+
+.polarid a img{
+    height:  inherit;
+    max-width: 100%;
+    filter:blur(5px);
+    filter : grayscale(100%);
+    -webkit-transform: translateY(1rem) scale(.9);;
+
+}
+.polarid a img:hover{
+    filter: grayscale(0%);
+    filter:blur(0);
+    -webkit-transform: translateY(10px) scale(1.2);
+
+}
+
+
+
+@media (min-width: 420px) {
+    body{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "header header header"
+            "main main aside"
+            "footer footer footer";
+        grid-template-rows: minmax(auto, max-content);
+    }
+}
+header li {
+    color: red;
+}
+
+
+
+/*------------formulario----------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+.container {
+    max-width:25rem;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    border-radius: 4rem;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	    box-shadow: 3rem 1rem 8px rgba(0,0,0,.2);
+  border-radius: 1rem;
+    background-color: rgba(88, 142, 172, 0.6);
+    padding:1rem;
+    margin:3rem 0;
+}
+
+#contact h3 {
+    color: #F96;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+#contact h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+    width:100%;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+}
+
+#contact textarea {
+    height:100px;
+    max-width:100%;
+    resize:none;
+}
+
+#contact button[type="submit"] {
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background:#0CF;
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+    background:#09C;
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+    outline:0;
+    border:1px solid #999;
+}
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
+}
+
+
+
+
+
+
+
+
